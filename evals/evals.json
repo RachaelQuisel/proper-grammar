@@ -1,0 +1,25 @@
+{
+  "skill_name": "proper-grammar",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "/proper-grammar\n\nHi Janine, I pulled the enrollment records this morning, and found three duplicates. The automation runs every night, but it skipped Tuesday because the base was locked. I checked the logs, and the error came from the payment step. I'll rerun it tonight, and send you the results tomorrow. Mark reviewed the script, and he agreed the fix is small. Open the Students table, and filter by Status to see them.",
+      "expected_output": "Commas removed before 'and found', 'and send', 'and filter'; kept before 'but it', 'and the error', 'and he'.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Remove the ',' after the conjunction. Because there is no subject in the second clause, this sentence is not a compound sentence, so stop adding in commas where they are not supposed to be.\n\nWe exported the grants, the payouts, and the vendors. The sync failed twice, so I paused it. Sharon approved the batch, and after lunch, sent the payouts. The script reads each record, and then writes a summary row. You can keep the old view, or delete it once the new one works. The field looks unused, yet still feeds two rollups. I tested the webhook, and I confirmed it fires on create.",
+      "expected_output": "Removed before 'and after lunch', 'and then writes', 'or delete', 'yet still'; serial comma, 'so I', 'and I confirmed' kept.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "run proper grammar on weekly-update.md",
+      "expected_output": "File edited in place: commas removed on lines for intake form, reminder automation, review copy, considered rebuild; Tom and import lines kept; count of 4 reported.",
+      "files": [
+        "inputs/weekly-update.md"
+      ]
+    }
+  ]
+}
